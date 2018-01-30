@@ -46,7 +46,13 @@ module.exports = {
                             ],
                             plugins: [
                                 'transform-object-rest-spread',
-                                'transform-export-extensions'
+                                'transform-export-extensions',
+                                [
+                                    'styled-components',
+                                    {
+                                        displayName: false
+                                    }
+                                ]
                             ]
                         }
                     }
@@ -174,7 +180,7 @@ module.exports = {
     },
     resolve: {
         alias: {
-            'public': path.resolve(__dirname, '../src/public')
+            'Public': path.resolve(__dirname, '../src/public')
         }
     }
 };
